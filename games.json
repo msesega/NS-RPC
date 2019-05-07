@@ -1,7 +1,7 @@
 {
     "games" :
         [
-            {"name" : "Home", "img" : "switch"},
+            {"name" : "Menú", "img" : "switch"},
             {"name" : "Splatoon 2", "img" : "splat"},
             {"name" : "Mario Kart 8 Deluxe", "img" : "mk8d"},
             {"name" : "Super Smash Bros. Ultimate", "img" : "ssbu"},

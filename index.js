@@ -88,7 +88,7 @@ function setIdle() {
         details: "Menú", 
         state: "Ausent", 
         largeImageKey: "switch", 
-        largeImageText: "Home"
+        largeImageText: "Menú"
     });
 }
 

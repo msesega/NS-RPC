@@ -1,7 +1,7 @@
 /* eslint-disable no-empty */
 /* eslint-disable no-unused-vars */
 
-// Windows stuff
+// Coses de Windows
 function handleSquirrelEvent(app) {
     if (process.argv.length === 1) {
         return false;

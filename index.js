@@ -3,7 +3,7 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const rpc = require("discord-rich-presence")("574263592908488705");
 const gameData = require("./games");  
 
-// For the love of God please let there be a better way of handling this
+// Per l’amor de Déu si us plau que hi hagi una millor manera de gestionar això
 if (require("./installer-events").handleSquirrelEvent(app)) return;
 
 let window;

@@ -66,7 +66,7 @@ let img;
 
 // Executes when game data is recieved
 ipcMain.on("game", (e, game, status) => {
-    if (status === "") desc = "Online";
+    if (status === "") desc = "En línia";
     else desc = status.charAt(0).toUpperCase() + status.slice(1);
     name = game;
     setRPC();
@@ -85,8 +85,8 @@ ipcMain.on("about", () => {
 // Sets the presence to idle
 function setIdle() {
     rpc.updatePresence({
-        details: "Home", 
-        state: "Idle", 
+        details: "Menú", 
+        state: "Ausent", 
         largeImageKey: "switch", 
         largeImageText: "Home"
     });

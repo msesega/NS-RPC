@@ -9,7 +9,7 @@ if (require("./installer-events").handleSquirrelEvent(app)) return;
 let window;
 let aboutWindow;
 
-// Used to create the window
+// Utilitzat per crear la finestra
 function createWindow () {
     window = new BrowserWindow({
         width: 400,
@@ -35,7 +35,7 @@ function createWindow () {
     setIdle();
 }
 
-// Used to create the about window
+// Utilitzat per la finestra de Quant a
 function createAboutWindow () {
     aboutWindow = new BrowserWindow({
         width: 500,
@@ -59,12 +59,12 @@ function createAboutWindow () {
     aboutWindow.on("ready-to-show", () => aboutWindow.show());
 }
 
-// Defines the vars that will contain game data
+// Defineix les variables que contindran les dades dels jocs
 let name;
 let desc;
 let img;
 
-// Executes when game data is recieved
+// Executa quan les dades dels jocs es reben
 ipcMain.on("game", (e, game, status) => {
     if (status === "") desc = "En línia";
     else desc = status.charAt(0).toUpperCase() + status.slice(1);
@@ -72,17 +72,17 @@ ipcMain.on("game", (e, game, status) => {
     setRPC();
 });
 
-// Executes when idle data is recieved
+// Executa quan la dada d'Ausent es rep
 ipcMain.on("idle", () => {
     setIdle();
 });
 
-// Executes when about data is recieved
+// Executa quan es rep la dada de Quant A
 ipcMain.on("about", () => {
     createAboutWindow();
 });
 
-// Sets the presence to idle
+// Posa la prescència a Ausent
 function setIdle() {
     rpc.updatePresence({
         details: "Menú", 
@@ -92,7 +92,7 @@ function setIdle() {
     });
 }
 
-// Finds the game image and sets the presence
+// Busca la imatge del joc i posa la prescència
 function setRPC() {
     for (i = 0; i < gameData.games.length; i++) {
         if (gameData.games[i].name === name) {
@@ -109,7 +109,7 @@ function setRPC() {
     });
 }
 
-// Events to listen for
+// Events per escoltar
 app.on("ready", createWindow);
 
 app.on("window-all-closed", () => {

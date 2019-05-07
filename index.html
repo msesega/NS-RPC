@@ -43,7 +43,7 @@
         const {ipcRenderer} = electron;
         const gameData = require("./games.json");
 
-        // Generates the menu
+        // Genera el menú
         const drop = document.getElementById("game");
         let list = "";
         for (i = 0; i < gameData.games.length; i++) {
@@ -51,7 +51,7 @@
         };
         drop.innerHTML = list;
 
-        // Declares and listens for a submition 
+        // Declara i escolta l'enviament 
         const form = document.querySelector("form");
         form.addEventListener("submit", () => {
             const game = document.querySelector("#game").value;
@@ -59,13 +59,13 @@
             ipcRenderer.send("game", game, mode);
         });
 
-        // Declares and listens for the idle button click
+        // Declara i escolta quan es clica el botó de Ausent
         const idle = document.getElementById("idle");
         idle.addEventListener("click", () => {
             ipcRenderer.send("idle");
         });
         
-        // Declares and listens for the about label click
+        // Declara i escolta quan es clica el botó de Quant a
         const about = document.getElementById("about");
         about.addEventListener("click", () => {
             ipcRenderer.send("about");

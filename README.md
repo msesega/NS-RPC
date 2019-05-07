@@ -1,2 +1,2 @@
 # NS-RPC
-The definitive way to display your Nintendo Switch games in Discord
+La manera definitiva d'ensenyar els teus jocs de Nintendo Switch a Discord

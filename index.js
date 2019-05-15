@@ -39,7 +39,7 @@ function createWindow () {
 function createAboutWindow () {
     aboutWindow = new BrowserWindow({
         width: 500,
-        height: 220,
+        height: 200,
         resizable: false,
         maximizable: false,
         icon: "icon.png",

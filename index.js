@@ -84,11 +84,7 @@ ipcMain.on("about", () => {
 
 // Posa la prescència a Ausent
 function setIdle() {
-    if (idle === 16) return rpc.updatePresence({
-        details: "La puta illa d'en Yoshi", 
-        state: "Aquesta primavera", 
-        largeImageKey: "yfi",
-        largeImageText: "ell està sentat allà"});
+    if (idle === 16) return rpc.updatePresence({largeImageKey: "poo"});
     rpc.updatePresence({
         details: "Menú", 
         state: "Ausent", 

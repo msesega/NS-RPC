@@ -39,7 +39,7 @@ function createWindow () {
 function createAboutWindow () {
     aboutWindow = new BrowserWindow({
         width: 500,
-        height: 200,
+        height: 220,
         resizable: false,
         maximizable: false,
         icon: "icon.png",
@@ -84,7 +84,6 @@ ipcMain.on("about", () => {
 
 // Posa la prescència a Ausent
 function setIdle() {
-    if (idle === 16) return rpc.updatePresence({largeImageKey: "poo"});
     rpc.updatePresence({
         details: "Menú", 
         state: "Ausent", 
